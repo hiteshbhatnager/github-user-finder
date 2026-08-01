@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 
 
 function Input() {
-    const [input, setInput] = useState('')
+    export const [input, setInput] = useState('')
 
     return (
         <>
@@ -17,8 +17,7 @@ function Input() {
                     value={input}
                     onChange={
                         (e) => {
-                            setInput(e.target.vlaue)
-                            console.log(input)
+                            setInput(e.target.value)
                         }
                     }
                 />
