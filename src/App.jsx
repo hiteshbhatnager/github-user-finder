@@ -25,7 +25,7 @@ function App() {
             <Input onChange={searchFun} value={value} />
           </div>
         </nav>
-        <main className="w-full h-auto flex justify-center items-center flex-col gap-6">
+        <main className="w-[80%] h-auto flex justify-center items-center flex-col gap-6 m-8">
           <Data value={value} />
         </main>
         <footer className='w-full h-auto py-4 px-5 flex justify-between items-center bg-gray-900'>

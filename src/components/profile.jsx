@@ -11,7 +11,7 @@ function Profile({
 }) {
     return (
         <>
-            <h1 className="mb-8 text-3xl font-bold text-center tracking-wide">
+            <h1 className="my-4 text-3xl font-bold text-center tracking-wide">
                 GitHub Profile
             </h1>
 

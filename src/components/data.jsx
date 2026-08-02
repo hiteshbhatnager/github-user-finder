@@ -46,7 +46,7 @@ function Data({
                 .then(res => res.json())
                 .then(data => {
                     if (data.message === "Not Found") {
-                        setRepos(null)
+                        setRepos([])
                     } else {
                         setRepos(data)
                     }
@@ -65,12 +65,22 @@ function Data({
 
     return (
         <>
-            <Profile username={user.login} avatar={user.avatar_url} followers={user.followers}
-                followings={user.followings} repo={repos.length} type={user.type} name={user.name} />
+            <Profile username={user.login}
+                avatar={user.avatar_url}
+                followers={user.followers}
+                followings={user.followings}
+                repo={repos.length} type={user.type}
+                name={user.name} />
 
             {
-                repos.map(() => (
-                    <Repos key={repos.id} />
+                repos.map((repo) => (
+                    <Repos key={repo.id}
+                        name={repo.name}
+                        url={repo.html_url}
+                        description={repo.description}
+                        language={repo.language}
+                        stars={repo.stargazers_count}
+                        forks={repo.forks_count} />
                 ))
             }
         </>
