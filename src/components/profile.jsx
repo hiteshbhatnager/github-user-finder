@@ -11,25 +11,63 @@ function Profile({
 }) {
     return (
         <>
-            <h1 className="align-middle m-2 w-full h-auto">GITHUB PROFILE</h1>
-            <div className="w-full h-80 bg-black m-10 flex justify-center items-center rounded-lg">
-                <div className="w-auto h-full flex">
-                    <img src={avatar} alt="avtar" className="w-60 h-60 p-2" />
-                    <div className="mx-8 my-10 flex">
-                        <h1 className="font-bold">{name}</h1>
-                        <h2 className="">@{username}</h2>
+            <h1 className="mb-8 text-3xl font-bold text-center tracking-wide">
+                GitHub Profile
+            </h1>
+
+            <div className="w-full max-w-4xl rounded-2xl bg-zinc-900 shadow-2xl p-8 text-white">
+
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+
+                    {/* Left Section */}
+                    <div className="flex flex-col items-center">
+                        <img
+                            src={avatar}
+                            alt="avatar"
+                            className="w-44 h-44 rounded-full border-4 border-gray-700 object-cover shadow-lg"
+                        />
+
+                        <h2 className="mt-5 text-2xl font-bold">
+                            {name}
+                        </h2>
+
+                        <p className="text-gray-400">
+                            @{username}
+                        </p>
                     </div>
+
+                    {/* Right Section */}
+                    <div className="flex-1">
+
+                        {/* Stats */}
+                        <div className="grid grid-cols-2 gap-6">
+
+                            <div className="rounded-xl bg-zinc-800 p-5 text-center">
+                                <h3 className="text-sm text-gray-400">Followers</h3>
+                                <p className="text-2xl font-bold">{followers}</p>
+                            </div>
+
+                            <div className="rounded-xl bg-zinc-800 p-5 text-center">
+                                <h3 className="text-sm text-gray-400">Following</h3>
+                                <p className="text-2xl font-bold">{followings}</p>
+                            </div>
+
+                            <div className="rounded-xl bg-zinc-800 p-5 text-center">
+                                <h3 className="text-sm text-gray-400">Repositories</h3>
+                                <p className="text-2xl font-bold">{repos}</p>
+                            </div>
+
+                            <div className="rounded-xl bg-zinc-800 p-5 text-center">
+                                <h3 className="text-sm text-gray-400">Account Type</h3>
+                                <p className="text-2xl font-bold">{type}</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-                <div className="w-auto h-full flex justify-between flex-col flex-start">
-                    <div className="flex m-4">
-                        <h3 className="font-bold">followings :<span>{followings}</span></h3>
-                        <h3 className="font-bold">followers :<span>{followers}</span></h3>
-                    </div>
-                    <div className="flex mx-15 gap-8 my-9">
-                        <h2>repos = {repos}</h2>
-                        <h2>type = {type}</h2>
-                    </div>
-                </div>
+
             </div>
         </>
     )

@@ -6,6 +6,7 @@ function Data({
     value = "",
 }) {
     const [user, setUser] = useState(null)
+    const [repos, setRepos] = useState(null)
     const [error, setError] = useState('')
 
     useEffect(() => {
@@ -34,9 +35,28 @@ function Data({
                     setError("Something went wrong");
                     setUser(null);
                 });
-        }, 700)
+        }, 500)
+
+        const timer2 = setTimeout(() => {
+            fetch(`https://api.github.com/users/${value}/repos`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`
+                    }
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.message === "Not Found") {
+                        setRepos(null)
+                    } else {
+                        setRepos(data)
+                        console.log("hitesh", data)
+                    }
+                })
+        }, 500)
 
         return () => clearTimeout(timer)
+        return () => clearTimeout(timer2)
     }, [value])
 
     if (error) return <div>{error}</div>
