@@ -3,23 +3,23 @@ import { FiSearch } from "react-icons/fi";
 
 
 
-function Input() {
-    export const [input, setInput] = useState('')
+function Input({
+    value = "",
+    className = "",
+    type = "text",
+    onChange
+}) {
 
     return (
         <>
-            <div className="flex items-center border rounded-lg px-3 py-1">
+            <div className={`flex items-center border rounded-lg px-3 py-1 ${className}`}>
                 <FiSearch className="text-gray-500" />
                 <input
-                    type="text"
+                    type={type}
                     placeholder="Search GitHub username..."
                     className="ml-2 w-full outline-none"
-                    value={input}
-                    onChange={
-                        (e) => {
-                            setInput(e.target.value)
-                        }
-                    }
+                    value={value}
+                    onChange={onChange}
                 />
             </div>
         </>
