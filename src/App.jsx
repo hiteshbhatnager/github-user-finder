@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <div className='w-full h-screen flex flex-col justify-between items-center bg-gray-500 text-white text-s'>
+      <div className='w-full h-screen flex flex-col justify-between items-center bg-gray-500 text-white text-s overflow-y-scroll'>
         <nav className='w-full h-15 py-1 px-2 flex justify-between items-center bg-black'>
           <div className='w-half mx-8 flex items-center'>
             <div className='m-4'>
@@ -25,7 +25,7 @@ function App() {
             <Input onChange={searchFun} value={value} />
           </div>
         </nav>
-        <main>
+        <main className="w-full h-auto flex justify-center items-center bg-gray-700 flex-col p-10 gap-6">
           <Data value={value} />
         </main>
         <footer className='w-full h-auto py-4 px-5 flex justify-between items-center bg-gray-900'>

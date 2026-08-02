@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Profile from "./profile";
 import input from './input'
 
 function Data({
@@ -43,9 +44,8 @@ function Data({
     if (!user) return null;
 
     return (
-        <div>
-            testing {user.login}
-        </div>
+        <Profile username={user.login} avatar={user.avatar_url} followers={user.followers}
+            followings={user.followings} repo="10" type={user.type} name={user.name} />
     );
 }
 
