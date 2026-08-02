@@ -3,11 +3,13 @@ import Input from './input'
 import Logo from './logo'
 import Profile from './profile'
 import List from './profileList'
+import Repos from './repos'
 
 export {
     Data,
     Input,
     Logo,
     Profile,
-    List
+    List,
+    Repos
 }

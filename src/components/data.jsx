@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Profile from "./profile";
-import input from './input'
+import { Profile, Repos } from "./index";
 
 function Data({
     value = "",
 }) {
     const [user, setUser] = useState(null)
-    const [repos, setRepos] = useState(null)
+    const [repos, setRepos] = useState([])
     const [error, setError] = useState('')
 
     useEffect(() => {
@@ -50,13 +49,14 @@ function Data({
                         setRepos(null)
                     } else {
                         setRepos(data)
-                        console.log("hitesh", data)
                     }
                 })
         }, 500)
 
-        return () => clearTimeout(timer)
-        return () => clearTimeout(timer2)
+        return () => {
+            clearTimeout(timer),
+                clearTimeout(timer2)
+        }
     }, [value])
 
     if (error) return <div>{error}</div>
@@ -64,8 +64,16 @@ function Data({
     if (!user) return null;
 
     return (
-        <Profile username={user.login} avatar={user.avatar_url} followers={user.followers}
-            followings={user.followings} repo="10" type={user.type} name={user.name} />
+        <>
+            <Profile username={user.login} avatar={user.avatar_url} followers={user.followers}
+                followings={user.followings} repo={repos.length} type={user.type} name={user.name} />
+
+            {
+                repos.map(() => (
+                    <Repos key={repos.id} />
+                ))
+            }
+        </>
     );
 }
 
