@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Logo, Input } from "./index"
 
 function Nav({ value, setValue }) {
 
-    const [value, setValue] = useState('')
+    [value, setValue] = useState('')
 
     const searchFun = (e) => {
         setValue(e.target.value)

@@ -13,5 +13,7 @@ export {
     Logo,
     Profile,
     List,
-    Repos
+    Repos,
+    Nav,
+    Footer
 }
