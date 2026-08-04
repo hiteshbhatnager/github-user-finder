@@ -1,13 +1,13 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useOutletContext } from "react-router-dom";
+import { Data } from "../components"
 
 function User() {
     const { username } = useParams()
 
     return (
         <>
-            <h1>User</h1>
-            <p>This is the User page.</p>
+            <Data value={username} />
         </>
     )
 }

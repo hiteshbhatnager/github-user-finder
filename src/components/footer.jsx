@@ -1,25 +1,38 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
-        <>
-            <footer className='w-full h-auto py-4 px-5 flex justify-between items-center bg-gray-900'>
-                <div className="px-4">
-                    <span className="mr-2 text-gray-200">Source:</span>
+        <footer className="w-full bg-gray-900 py-4">
+            <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+
+                <div className="flex items-center gap-4">
+                    <span className="text-gray-300">Source:</span>
 
                     <a
                         href="https://docs.github.com/en"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center rounded-lg bg-black px-4 py-2 text-white transition hover:bg-gray-800"
+                        className="rounded-lg bg-black px-4 py-2 hover:bg-gray-800 transition"
                     >
                         GitHub Docs
                     </a>
+
+                    <Link
+                        to="/about"
+                        className="rounded-lg bg-black px-4 py-2 hover:bg-gray-800 transition"
+                    >
+                        About
+                    </Link>
                 </div>
-                <div className='font-light text-xs items-baseline-last absolute bottom-0 right-0 m-2'>by hitesh bhatnager</div>
-            </footer>
-        </>
-    )
+
+                <p className="text-sm text-gray-400">
+                    © {new Date().getFullYear()} Hitesh Bhatnagar
+                </p>
+
+            </div>
+        </footer>
+    );
 }
 
-export default Footer
+export default Footer;

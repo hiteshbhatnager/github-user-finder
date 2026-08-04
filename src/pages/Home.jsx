@@ -5,8 +5,6 @@ import { List } from "../components"
 function Home() {
     const { value } = useOutletContext()
 
-    console.log(value)
-
     return (
         <>
             <List value={value} />
