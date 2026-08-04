@@ -11,7 +11,7 @@ function Profile({
 }) {
     return (
         <>
-            <main className="w-[80%] h-auto flex justify-center items-center flex-col gap-6 m-8">
+            <main className="w-[70%] h-auto flex justify-center items-center flex-col gap-6 m-8">
                 <h1 className="my-4 text-3xl font-bold text-center tracking-wide">
                     GitHub Profile
                 </h1>

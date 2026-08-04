@@ -9,7 +9,7 @@ function Repos({
     forks = 0,
 }) {
     return (
-        <div className="w-full max-w-4xl mx-auto bg-zinc-900 rounded-xl p-5 m-5 shadow-lg border border-zinc-800 hover:border-blue-500 transition-all duration-300">
+        <div className="w-[80%] max-w-4xl mx-auto bg-zinc-900 rounded-xl p-5 m-5 shadow-lg border border-zinc-800 hover:border-blue-500 transition-all duration-300">
 
             <a
                 href={url}

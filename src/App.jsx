@@ -15,8 +15,9 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />} >
-          <Route index element={<Data />} />
+          <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="user/:username" element={<User />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

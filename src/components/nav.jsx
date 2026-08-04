@@ -3,8 +3,6 @@ import { Logo, Input } from "./index"
 
 function Nav({ value, setValue }) {
 
-    [value, setValue] = useState('')
-
     const searchFun = (e) => {
         setValue(e.target.value)
     }

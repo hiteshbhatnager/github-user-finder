@@ -15,5 +15,5 @@ export {
     List,
     Repos,
     Nav,
-    Footer
+    Footer,
 }

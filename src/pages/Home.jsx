@@ -1,11 +1,15 @@
 import React from "react";
+import { useOutletContext } from "react-router-dom";
+import { List } from "../components"
 
 function Home() {
-    const { value } = useOutLetContext()
+    const { value } = useOutletContext()
+
+    console.log(value)
 
     return (
         <>
-            <Data value={value} />
+            <List value={value} />
         </>
     )
 }

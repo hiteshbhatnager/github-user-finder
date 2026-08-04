@@ -7,9 +7,9 @@ function Layout() {
 
     return (
         <>
-            <div className='w-full h-screen flex flex-col justify-between items-center bg-gray-500 text-white text-s overflow-y-scroll'>
+            <div className='w-full h-screen flex flex-col justify-between items-center bg-gray-500 text-white text-s overflow-y-scroll '>
                 <Nav value={value} setValue={setValue} />
-                <Outlet context={value} />
+                <Outlet context={{ value, setValue }} />
                 <Footer />
             </div>
         </>
