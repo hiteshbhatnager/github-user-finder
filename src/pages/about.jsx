@@ -6,15 +6,14 @@ function About() {
         <div className="min-h-screen bg-gray-500 text-white px-6 py-12">
             <div className="max-w-5xl mx-auto">
 
-                <div className="bg-gray-800 rounded-xl p-8 shadow-lg">
-                    <h1 className="text-4xl font-bold text-center mb-4 text-black">
+                <div className="bg-gray-800 rounded-xl p-8 m-8 shadow-lg">
+                    <h1 className="text-4xl font-bold text-center mb-4 text-white">
                         About GitHub User Finder
                     </h1>
+                    <p className="text-center text-gray-400 mb-10 ">
+                        Search GitHub users, view their profiles, and explore their public repositories.
+                    </p>
                 </div>
-
-                <p className="text-center text-gray-800 mb-10 ">
-                    Search GitHub users, view their profiles, and explore their public repositories.
-                </p>
 
                 <div className="bg-gray-800 rounded-xl p-8 shadow-lg">
                     <h2 className="text-2xl font-semibold mb-4">

@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Logo, Input, Data } from './components'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import Layout from './layout'
 import Home from './pages/Home'
@@ -10,6 +11,11 @@ import About from './pages/About'
 import NotFound from './pages/NotFound'
 
 function App() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    navigate("/")
+  }, [])
 
   return (
     <>

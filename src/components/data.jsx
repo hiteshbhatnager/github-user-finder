@@ -34,7 +34,7 @@ function Data({
                     setError("Something went wrong");
                     setUser(null);
                 });
-        }, 500)
+        }, 50)
 
         const timer2 = setTimeout(() => {
             fetch(`https://api.github.com/users/${value}/repos`,
@@ -69,7 +69,7 @@ function Data({
                 avatar={user.avatar_url}
                 followers={user.followers}
                 followings={user.followings}
-                repo={repos.length} type={user.type}
+                repos={repos.length} type={user.type}
                 name={user.name} />
 
             {

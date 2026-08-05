@@ -6,7 +6,7 @@ function Profile({
     avatar,
     name = "",
     username = "",
-    repos = "10",
+    repos = "",
     type = ""
 }) {
     return (
