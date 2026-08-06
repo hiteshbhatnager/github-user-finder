@@ -8,7 +8,7 @@ import Layout from './layout'
 import Home from './pages/home'
 import User from './pages/user'
 import About from './pages/about'
-import NotFound from './pages/notFound'
+import NotFound from './pages/notfound'
 
 function App() {
   const navigate = useNavigate()
